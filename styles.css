@@ -1,9 +1,9 @@
 :root {
-  --ink: #003a3b;
-  --deep: #003f40;
-  --teal: #007f86;
-  --soft: #f2f9f8;
-  --warm: #fff7f6;
+  --ink: #33213f;
+  --deep: #3f245f;
+  --teal: #8b5cf6;
+  --soft: #f7f2ff;
+  --warm: #fff5fb;
   --line: rgba(0, 58, 59, 0.14);
   --white: #ffffff;
 }

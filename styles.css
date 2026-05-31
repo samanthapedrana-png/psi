@@ -87,7 +87,7 @@ img {
 .button:hover,
 .nav-cta:hover {
   transform: translateY(3px);
-  box-shadow: 0 5px 0 #00606a;
+  box-shadow: 0 5px 0 #DCCDE8;
 }
 
 .button-primary {

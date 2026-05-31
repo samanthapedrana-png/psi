@@ -230,6 +230,7 @@ h3 {
 .hero-image,
 .therapy-block img,
 .about img,
+.about-detail img,
 .booking img,
 .service-grid img {
   width: 100%;
@@ -277,6 +278,7 @@ h3 {
 
 .therapy-block,
 .about,
+.about-detail,
 .booking {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -290,6 +292,7 @@ h3 {
 
 .therapy-block img,
 .about img,
+.about-detail img,
 .booking img {
   height: clamp(340px, 42vw, 620px);
 }
@@ -340,6 +343,14 @@ cite {
 }
 
 .about p {
+  margin-bottom: 20px;
+}
+
+.about-detail {
+  background: var(--warm);
+}
+
+.about-detail p {
   margin-bottom: 20px;
 }
 
@@ -431,6 +442,7 @@ form .button {
   .service-grid,
   .therapy-block,
   .about,
+  .about-detail,
   .booking,
   .footer-grid {
     grid-template-columns: 1fr;

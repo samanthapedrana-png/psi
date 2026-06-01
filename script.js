@@ -19,7 +19,7 @@ document.querySelector('footer form').addEventListener('submit', (event) => {
 });
 const cookieBanner = document.querySelector('.cookie-banner');
 const cookieButtons = document.querySelectorAll('[data-cookie-choice]');
-const cookieChoice = localStorage.getItem('cookie-choice');
+const cookieChoice = localStorage.getItem('privacy-cookie-notice');
 
 if (cookieBanner && !cookieChoice) {
   cookieBanner.hidden = false;

@@ -27,7 +27,7 @@ if (cookieBanner && !cookieChoice) {
 
 cookieButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    localStorage.setItem('cookie-choice', button.dataset.cookieChoice);
+       localStorage.setItem('privacy-cookie-notice', button.dataset.cookieChoice);
     cookieBanner.hidden = true;
   });
 });

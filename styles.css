@@ -218,7 +218,12 @@ h3 {
   font-size: clamp(1.02rem, 1.7vw, 1.32rem);
   font-weight: 500;
 }
-
+.hero .language-note {
+  max-width: 680px;
+  margin-top: 22px;
+  font-size: clamp(0.92rem, 1.3vw, 1.05rem);
+  opacity: 0.78;
+}
 .actions {
   display: flex;
   flex-wrap: wrap;

@@ -433,6 +433,58 @@ form .button {
 .copyright a {
   text-decoration: underline;
 }
+.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 28px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px 24px;
+  font-weight: 600;
+}
+
+.legal-links a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.policy-page {
+  background: var(--soft);
+}
+
+.policy-hero {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.policy-content {
+  max-width: 920px;
+  margin: 0 auto;
+  background: var(--white);
+}
+
+.policy-content h2 {
+  margin-top: 40px;
+}
+
+.policy-content h2:first-child {
+  margin-top: 0;
+}
+
+.policy-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+
+.policy-content a {
+  color: var(--teal);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .cookie-banner {
   position: fixed;
   right: clamp(16px, 4vw, 36px);

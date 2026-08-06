@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://samanthapedrana-png.github.io/psi/sitemap.xml

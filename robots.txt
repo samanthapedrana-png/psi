@@ -1,3 +1,4 @@
+# Sitemap del sito
 User-agent: *
 Allow: /
 

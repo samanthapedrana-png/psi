@@ -281,7 +281,24 @@ h3 {
 .service-grid p {
   margin-bottom: 0;
 }
+.profile-timeline {
+  display: grid;
+  gap: 22px;
+  margin-top: 28px;
+}
 
+.profile-timeline article {
+  border-left: 2px solid var(--accent);
+  padding: 4px 0 4px 22px;
+}
+
+.profile-timeline h3 {
+  margin-bottom: 6px;
+}
+
+.profile-timeline p {
+  margin-bottom: 0;
+}
 .therapy-block,
 .about,
 .about-detail,

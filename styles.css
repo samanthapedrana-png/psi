@@ -299,6 +299,19 @@ h3 {
 .profile-timeline p {
   margin-bottom: 0;
 }
+/* Nasconde il triangolino dei summary */
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::marker {
+  display: none;
+}
 .therapy-block,
 .about,
 .about-detail,

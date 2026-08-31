@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://samanthapedrana-png.github.io/psi/sitemap.xml
+Sitemap: https://github.com/samanthapedrana-png/psi/blob/main/sitemap.xml

@@ -1166,6 +1166,8 @@ form .button {
 z-index: 110;
 top: 10%;
 left: 10%;
+  transform: rotate (0deg);
+  transition: all 0.35s cubic.bezier(.215, .61, .355, 1);
  }
 .nav-hamburger {
   left: 0;
@@ -1175,6 +1177,7 @@ left: 10%;
   position: absolute;
   background: white
   background-repeat: 10 px;
+  transition: all 0.35s cubic.bezier(.215, .61, .355, 1);
   }
 .nav-hamburger span:nth-child(1){
 top:0;
@@ -1189,3 +1192,23 @@ width: 35%;
 top:20px;
 width: 65%;
  }
+.open .nav-hamburger{
+transform: rotate (180deg);
+ }
+.open .nav-haburger span:nth-child(1){
+top: 2em;
+width:0;
+}
+.open .nav-haburger span:nth-child(2){
+transform: rotate(45deg);
+width:100%;
+}
+.open .nav-haburger span:nth-child(3){
+transform: rotate(-45deg);
+width:100%
+}
+.open .nav-haburger span:nth-child(4){
+top: 18px;
+width:0%
+  left:50%;
+}

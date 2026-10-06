@@ -1155,3 +1155,157 @@ form .button {
 
 }
 /* ========================================================= FORMAZIONE ========================================================= */ .formazione-section { background: var(--soft); } .formazione-intro { max-width: 780px; margin: 0 auto 60px; text-align: center; } .formazione-intro .eyebrow { color: var(--teal); } .formazione-intro h2 { margin-bottom: 20px; } .formazione-intro > p:last-child { max-width: 700px; margin-right: auto; margin-left: auto; } /* --------------------------------------------------------- ELENCO ANNI --------------------------------------------------------- */ .formazione-list { display: grid; gap: 18px; max-width: 900px; margin: 0 auto; } /* --------------------------------------------------------- SINGOLO ANNO --------------------------------------------------------- */ .formazione-year { overflow: hidden; border: 1px solid var(--line); border-radius: 28px; background: var(--white); box-shadow: 0 8px 24px rgba(63, 36, 95, 0.05); } /* --------------------------------------------------------- INTESTAZIONE --------------------------------------------------------- */ .formazione-year > summary { display: grid; grid-template-columns: 100px minmax(0, 1fr) 42px; align-items: center; gap: 20px; min-height: 92px; padding: 18px 28px; color: var(--ink); cursor: pointer; transition: background 180ms ease; } .formazione-year > summary:hover { background: var(--soft); } .formazione-year > summary:focus-visible { outline: 3px solid rgba(139, 92, 246, 0.3); outline-offset: -3px; } /* --------------------------------------------------------- ANNO --------------------------------------------------------- */ .formazione-year-number { color: var(--teal); font-size: 1.65rem; font-weight: 700; } /* --------------------------------------------------------- TITOLO --------------------------------------------------------- */ .formazione-year-title { font-size: 1rem; font-weight: 700; line-height: 1.4; } /* --------------------------------------------------------- PULSANTE + --------------------------------------------------------- */ .formazione-toggle { display: grid; place-items: center; width: 36px; height: 36px; border: 2px solid var(--teal); border-radius: 50%; color: var(--teal); font-size: 1.35rem; font-weight: 400; line-height: 1; transition: transform 180ms ease, background 180ms ease, color 180ms ease; } .formazione-year[open] .formazione-toggle { transform: rotate(45deg); background: var(--teal); color: var(--white); } /* --------------------------------------------------------- CONTENUTO --------------------------------------------------------- */ .formazione-content { padding: 0 28px 28px; } .formazione-content-inner { display: grid; gap: 16px; padding-top: 4px; } /* --------------------------------------------------------- SINGOLO ELEMENTO FORMATIVO --------------------------------------------------------- */ .formazione-item { padding: 25px 26px; border: 1px solid var(--line); border-radius: 22px; background: var(--soft); } .formazione-item.featured { background: var(--warm); border-color: rgba(139, 92, 246, 0.25); } .formazione-item-type { display: block; margin-bottom: 8px; color: var(--teal); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; } .formazione-item h3 { margin-bottom: 8px; } .formazione-item .ente { margin-bottom: 10px; color: var(--deep); font-weight: 700; } .formazione-item p:last-child { margin-bottom: 0; } /* --------------------------------------------------------- NOTA FINALE --------------------------------------------------------- */ .formazione-note { max-width: 700px; margin: 60px auto 0; text-align: center; } .formazione-note p { margin-bottom: 0; font-style: italic; } /* --------------------------------------------------------- MOBILE --------------------------------------------------------- */ @media (max-width: 600px) { .formazione-intro { margin-bottom: 40px; } .formazione-list { gap: 14px; } .formazione-year { border-radius: 22px; } .formazione-year > summary { grid-template-columns: 65px minmax(0, 1fr) 36px; gap: 12px; min-height: 78px; padding: 15px 18px; } .formazione-year-number { font-size: 1.35rem; } .formazione-year-title { font-size: 0.9rem; line-height: 1.35; } .formazione-toggle { width: 32px; height: 32px; font-size: 1.15rem; } .formazione-content { padding: 0 18px 18px; } .formazione-item { padding: 20px; border-radius: 18px; } .formazione-item h3 { font-size: 1.2rem; } .formazione-note { margin-top: 45px; } }
+/* burger menu
+/* =========================
+   NAVBAR
+   ========================= */
+
+.site-header {
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.nav-menu a:hover {
+  opacity: 0.65;
+}
+
+
+/* =========================
+   PULSANTE HAMBURGER
+   ========================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+  padding: 8px;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+
+  background: currentColor;
+  border-radius: 2px;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.2s ease;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 18px 22px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: relative;
+    z-index: 1002;
+  }
+
+  .nav-menu {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    padding: 20px 0 25px;
+
+    flex-direction: column;
+    gap: 0;
+
+    background: inherit;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 13px 20px;
+  }
+
+  /* MENU APERTO */
+
+  .nav-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Animazione hamburger → X */
+
+  .menu-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}

@@ -31,3 +31,37 @@ cookieButtons.forEach((button) => {
     cookieBanner.hidden = true;
   });
 });
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  menuToggle.addEventListener('click', () => {
+
+    const isOpen = navMenu.classList.toggle('open');
+
+    menuToggle.classList.toggle('open', isOpen);
+
+    menuToggle.setAttribute('aria-expanded', isOpen);
+
+    menuToggle.setAttribute(
+      'aria-label',
+      isOpen ? 'Chiudi il menu' : 'Apri il menu'
+    );
+  });
+
+
+  // Chiude il menu quando si clicca su una voce
+  navMenu.querySelectorAll('a').forEach(link => {
+
+    link.addEventListener('click', () => {
+
+      navMenu.classList.remove('open');
+      menuToggle.classList.remove('open');
+
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Apri il menu');
+
+    });
+
+  });
+</script>
